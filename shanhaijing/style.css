@@ -1,0 +1,117 @@
+/* 全局样式设定 */
+body {
+    font-family: 'Noto Serif SC', serif;
+    background-image: url('images/background-texture.jpg'); /* 推荐使用宣纸或水墨纸纹理图片 */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* 页眉样式 */
+.site-header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+.site-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #555;
+    font-size: 1em;
+}
+
+.site-header nav a:hover {
+    color: #000;
+}
+
+/* 主体内容区布局（卡片式） */
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 单个卡片样式 */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-description {
+    padding: 15px;
+}
+
+.card-description h2 {
+    margin-top: 0;
+    font-size: 1.6em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+}
+
+.card-description p {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* 页脚样式 */
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 2px solid rgba(0,0,0,0.2);
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 响应式布局优化 */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2em;
+    }
+
+    .site-header nav a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 15px;
+    }
+
+    .site-header h1 {
+        font-size: 1.5em;
+    }
+
+    .content-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
