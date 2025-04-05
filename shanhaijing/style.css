@@ -1,5 +1,7 @@
 /* 全局样式设定 */
 body {
+    border: 10px solid red !important; 
+}
     font-family: 'Noto Serif SC', serif;
     background-image: url('images/background-texture.jpg'); /* 推荐使用宣纸或水墨纸纹理图片 */
     background-size: cover;
